@@ -18,3 +18,12 @@ jobs:
           ls ${{ github.workspace }}
           pwd
       - run: echo "🍏 This job's status is ${{ job.status }}."
+
+      - uses: actions/setup-java@v3
+        with: 
+          distribution: 'temurin'
+          java-version: '17'
+      - run:
+          echo "installed java"
+          java -version
+      
